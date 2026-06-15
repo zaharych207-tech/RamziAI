@@ -2,70 +2,100 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>RamziAi - Мой аккаунт</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .profile-container {
-      max-width: 600px;
-      margin: 2rem auto;
+      max-width: 500px;
+      margin: 1rem auto;
       background: #fff;
       border-radius: 10px;
-      padding: 2rem;
+      padding: 1.5rem;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       text-align: center;
     }
     .avatar {
-      font-size: 6rem;
-      margin-bottom: 1rem;
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
     }
     .username {
-      font-size: 2rem;
+      font-size: 1.6rem;
       color: #2c3e50;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
     .member-since {
       color: #777;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
     }
     .profile-stats {
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
       padding: 1rem 0;
       border-top: 1px solid #eee;
       border-bottom: 1px solid #eee;
+      flex-wrap: wrap;
     }
     .stat {
       text-align: center;
     }
     .stat-value {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: bold;
       color: #e67e22;
     }
     .stat-label {
       color: #777;
+      font-size: 0.8rem;
     }
     .empty-state {
       background: #f9f9f9;
       border-radius: 8px;
-      padding: 2rem;
+      padding: 1.5rem;
       color: #999;
+    }
+    .empty-state p {
+      font-size: 0.9rem;
     }
     .profile-actions {
       display: flex;
-      gap: 1rem;
+      gap: 0.8rem;
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .profile-actions .btn {
+      font-size: 0.85rem;
+      padding: 0.6rem 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .profile-container {
+        margin: 0.8rem;
+        padding: 1rem;
+      }
+      .username {
+        font-size: 1.3rem;
+      }
+      .profile-stats {
+        gap: 1rem;
+      }
+      .profile-actions {
+        flex-direction: column;
+      }
+      .profile-actions .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-home">
-      <a href="index.html">На главную</a>
+      <a href="index.html">RamziAi</a>
     </div>
     <nav>
       <ul>
@@ -76,7 +106,7 @@
       </ul>
     </nav>
     <div class="profile-icon">
-      <a href="account.html">Аккаунт</a>
+      <a href="account.html">👤</a>
     </div>
   </header>
 
@@ -102,12 +132,12 @@
       </div>
 
       <div class="empty-state">
-        <p>😢 У вас пока нет рецептов</p>
-        <p style="margin-top: 0.5rem; color: #e67e22;">Напишите первый рецепт или попросите ИИ помочь!</p>
+        <p>У вас пока нет рецептов</p>
+        <p style="margin-top: 0.5rem; color: #e67e22; font-size: 0.85rem;">Напишите первый рецепт или попросите ИИ помочь!</p>
       </div>
 
       <div class="profile-actions">
-        <a href="#" class="btn">Редактировать профиль</a>
+        <a href="#" class="btn">Редактировать</a>
         <a href="#" class="btn" style="background: #95a5a6;">Мои рецепты</a>
       </div>
     </div>
