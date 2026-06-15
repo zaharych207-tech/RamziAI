@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RamziAi - Мой аккаунт</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .profile-container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .avatar {
+      font-size: 6rem;
+      margin-bottom: 1rem;
+    }
+    .username {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 0.5rem;
+    }
+    .member-since {
+      color: #777;
+      margin-bottom: 2rem;
+    }
+    .profile-stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      padding: 1rem 0;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e67e22;
+    }
+    .stat-label {
+      color: #777;
+    }
+    .empty-state {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 2rem;
+      color: #999;
+    }
+    .profile-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-home">
+      <a href="index.html">На главную</a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="recipes.html">Рецепты</a></li>
+        <li><a href="ai.html">ИИ</a></li>
+        <li><a href="support.html">Поддержка</a></li>
+        <li><a href="login.html">Вход</a></li>
+      </ul>
+    </nav>
+    <div class="profile-icon">
+      <a href="account.html">Аккаунт</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="profile-container">
+      <div class="avatar">👤</div>
+      <h1 class="username">Гость</h1>
+      <div class="member-since">На сайте с марта 2025</div>
+
+      <div class="profile-stats">
+        <div class="stat">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Рецептов</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Подписчиков</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Оценок</div>
+        </div>
+      </div>
+
+      <div class="empty-state">
+        <p>😢 У вас пока нет рецептов</p>
+        <p style="margin-top: 0.5rem; color: #e67e22;">Напишите первый рецепт или попросите ИИ помочь!</p>
+      </div>
+
+      <div class="profile-actions">
+        <a href="#" class="btn">Редактировать профиль</a>
+        <a href="#" class="btn" style="background: #95a5a6;">Мои рецепты</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

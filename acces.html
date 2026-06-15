@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src=>"https://vdqdlmgrweyhdvtqwlem.supabase.co"</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RamziAi - Мой аккаунт</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .profile-container {
+        max-width: 600px;
+        margin: 2rem auto;
+        background: #fff;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        text-align: center;
+      }
+      .avatar {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+      }
+      .username {
+        font-size: 2rem;
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+      .member-since {
+        color: #777;
+        margin-bottom: 2rem;
+      }
+      .profile-stats {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem 0;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+      }
+      .stat {
+        text-align: center;
+      }
+      .stat-value {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #e67e22;
+      }
+      .stat-label {
+        color: #777;
+      }
+      .empty-state {
+        background: #f9f9f9;
+        border-radius: 8px;
+        padding: 2rem;
+        color: #999;
+      }
+      .profile-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+    </style>
+</head>
+
+<header>
+    <script></script>
+  <div class="logo-home">
+    <a href="index.html">На главную</a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="recipes.html">Рецепты</a></li>
+      <li><a href="ai.html">ИИ</a></li>
+      <li><a href="support.html">Поддержка</a></li>
+      <li><a href="login.html">Вход</a></li>
+    </ul>
+  </nav>
+  <div class="profile-icon">
+    <a href="account.html">Аккаунт</a>
+  </div>
+</header>
+
+<main>
+  <div class="register-container">
+    <h2 class="register-title">Создать аккаунт</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Имя</label>
+        <input type="text" id="uname" placeholder="Ваше имя">
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="••••••••">
+      </div>
+      <div class="form-group">
+        <label for="confirm">Подтвердите пароль</label>
+        <input type="password" id="spassword" placeholder="••••••••">
+      </div>
+      <button type="submit" id="submit" class="btn" style="width: 100%;">Зарегистрироваться</button>
+    </form>
+    <div class="register-footer">
+      Уже есть аккаунт? <a href="login.html">Войти</a>
+    </div>
+  </div>
+</main>
+</body>
+    <script>
+
+document.querySelector("form").onsubmit= async function(e) {
+    e.preventDefault();
+    var u= document.querySelector("#uname").value;
+    var p = document.querySelector("#password").value;
+    var s = document.querySelector("#submit");
+    s.setAttribute('disabled', '1')
+    var res = await sessi.from('users').insert({ User: u, Password: p }).select();
+            console.log(res);
+    s.removeAttribute('disabled'); 
+    if(res.error==null) { alert("vse ok"); }
+    else { alert(  res.error.details ); }
+    //ins();
+}
+
+
+        var sessi = supabase.createClient('https://sb_publishable_NH5f2c0Y-9jqBqOidJIEHg_1-Cqnqc2');
+        console.log(sessi);
+   
+
+    </script>
+
+
+</body>
+
+</html>
