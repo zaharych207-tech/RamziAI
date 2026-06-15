@@ -3,121 +3,220 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  body {
+}
+
+body {
     background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
-  }
-  
-  /* Шапка */
-  header {
+}
+
+/* Шапка - адаптивная */
+header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 100;
-  }
-  
-  .logo-home a {
-    font-size: 1.8rem;
+    gap: 0.5rem;
+}
+
+.logo-home a {
+    font-size: 1.2rem;
     text-decoration: none;
     color: #333;
-  }
-  
-  nav ul {
+    white-space: nowrap;
+}
+
+/* Навигация - адаптивная */
+nav ul {
     display: flex;
     list-style: none;
-    gap: 2rem;
-  }
-  
-  nav ul li a {
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
     text-decoration: none;
     color: #555;
     font-weight: 500;
     transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
     color: #e67e22;
-  }
-  
-  .profile-icon a {
-    font-size: 1.8rem;
+}
+
+.profile-icon a {
+    font-size: 1.2rem;
     text-decoration: none;
     color: #333;
-  }
-  
-  /* Основной контейнер */
-  main {
+    white-space: nowrap;
+}
+
+/* Основной контейнер */
+main {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 0 1rem;
-  }
-  
-  /* Заголовки страниц */
-  .page-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+}
+
+/* Заголовки страниц */
+.page-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
     color: #2c3e50;
     border-bottom: 2px solid #e67e22;
     padding-bottom: 0.5rem;
-  }
-  
-  /* Карточки (для главной и других) */
-  .card {
+}
+
+/* Карточки */
+.card {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Кнопки */
-  .btn {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Кнопки */
+.btn {
     display: inline-block;
     background: #e67e22;
     color: #fff;
-    padding: 0.7rem 1.5rem;
+    padding: 0.7rem 1.2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: background 0.3s;
     text-decoration: none;
-  }
-  
-  .btn:hover {
+    text-align: center;
+}
+
+.btn:hover {
     background: #cf711f;
-  }
-  
-  /* Формы */
-  .form-group {
+}
+
+/* Формы */
+.form-group {
     margin-bottom: 1rem;
-  }
-  
-  .form-group label {
+}
+
+.form-group label {
     display: block;
     margin-bottom: 0.3rem;
     font-weight: 500;
-  }
-  
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
     width: 100%;
-    padding: 0.8rem;
+    padding: 0.7rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
-  }
-  
-  .form-group textarea {
+}
+
+.form-group textarea {
     resize: vertical;
     min-height: 100px;
-  }
+}
+
+/* ========== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ========== */
+
+/* Планшеты и маленькие ноутбуки */
+@media (max-width: 768px) {
+    header {
+        padding: 0.6rem 1rem;
+    }
+    
+    .logo-home a, .profile-icon a {
+        font-size: 1rem;
+    }
+    
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    main {
+        margin: 0.8rem auto;
+    }
+}
+
+/* Мобильные телефоны */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+    
+    .logo-home {
+        margin-bottom: 0.3rem;
+    }
+    
+    nav ul {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+    
+    .profile-icon {
+        position: absolute;
+        top: 0.8rem;
+        right: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.3rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Очень маленькие телефоны */
+@media (max-width: 360px) {
+    nav ul {
+        gap: 0.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 0.7rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
