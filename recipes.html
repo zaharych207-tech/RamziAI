@@ -2,61 +2,68 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>RamziAi - Рецепты</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .recipes-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
     }
     .recipe-card {
       background: #fff;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
     .recipe-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
     .recipe-img {
-      height: 200px;
+      height: 180px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
     .recipe-content {
-      padding: 1.2rem;
+      padding: 1rem;
     }
     .recipe-title {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
       color: #2c3e50;
+    }
+    .recipe-content p {
+      font-size: 0.85rem;
+      color: #666;
     }
     .recipe-meta {
       display: flex;
       gap: 1rem;
-      margin: 0.8rem 0;
+      margin: 0.5rem 0;
       color: #777;
+      font-size: 0.8rem;
+      flex-wrap: wrap;
     }
     .recipe-meta span {
       display: flex;
       align-items: center;
-      gap: 0.3rem;
+      gap: 0.2rem;
     }
     .recipe-actions {
       display: flex;
       gap: 1rem;
       border-top: 1px solid #eee;
-      padding-top: 1rem;
+      padding-top: 0.8rem;
       margin-top: 0.5rem;
+      flex-wrap: wrap;
     }
     .recipe-actions button {
       background: none;
       border: none;
-      font-size: 1.2rem;
+      font-size: 0.9rem;
       cursor: pointer;
       color: #555;
       display: flex;
@@ -66,12 +73,21 @@
     .recipe-actions button:hover {
       color: #e67e22;
     }
+
+    @media (max-width: 600px) {
+      .recipes-grid {
+        grid-template-columns: 1fr;
+      }
+      .recipe-img {
+        height: 160px;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="profile-icon">
-      <a href="index.html">На главную</a>
+    <div class="logo-home">
+      <a href="index.html">🍳 RamziAi</a>
     </div>
     <nav>
       <ul>
@@ -82,20 +98,19 @@
       </ul>
     </nav>
     <div class="profile-icon">
-      <a href="account.html">Аккаунт</a>
+      <a href="account.html">👤</a>
     </div>
   </header>
 
   <main>
-    <h1 class="page-title">Свежие рецепты</h1>
+    <h1 class="page-title">🍽️ Свежие рецепты</h1>
     <div class="recipes-grid">
 
-      <!-- Карточка рецепта 1: Паста карбонара -->
       <div class="recipe-card">
         <div class="recipe-img" style="background-image: url('https://static.tildacdn.com/tild6164-6239-4561-a130-376437623033/_4.png');"></div>
         <div class="recipe-content">
           <h3 class="recipe-title">Паста карбонара</h3>
-          <p>Нежный сливочный соус, бекон, пармезан. Просто и вкусно!</p>
+          <p>Нежный сливочный соус, бекон, пармезан</p>
           <div class="recipe-meta">
             <span>👤 Шеф_Игорь</span>
             <span>📅 15.03.2025</span>
@@ -108,12 +123,11 @@
         </div>
       </div>
 
-      <!-- Карточка рецепта 2: Греческий салат -->
       <div class="recipe-card">
         <div class="recipe-img" style="background-image: url('https://art-lunch.ru/content/uploads/2018/07/Greek_salad_01.jpg');"></div>
         <div class="recipe-content">
           <h3 class="recipe-title">Греческий салат</h3>
-          <p>Свежие овощи, фета, оливки, орегано.</p>
+          <p>Свежие овощи, фета, оливки, орегано</p>
           <div class="recipe-meta">
             <span>👤 Оливье</span>
             <span>📅 14.03.2025</span>
@@ -126,12 +140,11 @@
         </div>
       </div>
 
-      <!-- Карточка рецепта 3: Медовик -->
       <div class="recipe-card">
         <div class="recipe-img" style="background-image: url('https://difoodlover.com/wp-content/uploads/2022/04/photo_2023-05-10_18-56-03.jpg.webp');"></div>
         <div class="recipe-content">
           <h3 class="recipe-title">Медовик</h3>
-          <p>Нежные коржи со сгущёнкой, тает во рту.</p>
+          <p>Нежные коржи со сгущёнкой</p>
           <div class="recipe-meta">
             <span>👤 Сладкоежка</span>
             <span>📅 13.03.2025</span>
