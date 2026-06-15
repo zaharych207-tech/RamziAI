@@ -2,22 +2,23 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   <title>RamziAi - Вход</title>
   <link rel="stylesheet" href="style.css">
   <style>
     .login-container {
       max-width: 400px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       background: #fff;
       border-radius: 10px;
-      padding: 2rem;
+      padding: 1.5rem;
       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     .login-title {
       text-align: center;
       margin-bottom: 1.5rem;
       color: #2c3e50;
+      font-size: 1.5rem;
     }
     .login-footer {
       text-align: center;
@@ -27,15 +28,22 @@
       color: #e67e22;
       text-decoration: none;
     }
-    .login-footer a:hover {
-      text-decoration: underline;
+
+    @media (max-width: 480px) {
+      .login-container {
+        margin: 1rem;
+        padding: 1.2rem;
+      }
+      .login-title {
+        font-size: 1.3rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo-home">
-      <a href="index.html">На главную</a>
+      <a href="index.html">RamziAi</a>
     </div>
     <nav>
       <ul>
@@ -46,13 +54,13 @@
       </ul>
     </nav>
     <div class="profile-icon">
-      <a href="account.html">Аккаунт</a>
+      <a href="account.html">👤</a>
     </div>
   </header>
 
   <main>
     <div class="login-container">
-      <h2 class="login-title">Вход на RamziAi</h2>
+      <h2 class="login-title">Вход</h2>
       <form>
         <div class="form-group">
           <label for="username">Логин или email</label>
